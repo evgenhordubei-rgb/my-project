@@ -1,0 +1,320 @@
+/* Global titles */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("../fonts/poppins-v24-latin-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("../fonts/poppins-v24-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("../fonts/poppins-v24-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 900;
+  src: url("../fonts/poppins-v24-latin-900.woff2") format("woff2");
+}
+:root {
+  --color-primary-white: #faf4ea;
+  --color-primary-light:#cfcfbc;
+  --color-primary-black: #31261a;
+  --color-olive-green-dark: #465929;
+  --color-olive-green-light: #819b57;
+  --color-secondary-black:#A18268;
+}
+
+/* Base */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: var(--color-primary-black);
+  font-family: "Poppins", sans-serif !important;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0px;
+  background-color: var(--color-primary-white);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+address {
+  font-style: normal;
+}
+
+section {
+  padding: 48px 0px;
+}
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0px 24px;
+}
+/* hidden section */
+.hidden-section {
+  padding: 0px 0px;
+}
+/* Button section */
+.button-title {
+  padding: 16px 32px;
+}
+.button {
+  color: var(--color-primary-white);
+  background-color: var(--color-olive-green-light);
+  border: 2px solid var(--color-olive-green-light);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.button:hover {
+  background-color: transparent;
+  color: var(--color-olive-green-dark);
+  /* Link section */
+}
+
+.link {
+  color: var(--color-primary-white);
+  text-decoration: none;
+  line-height: 27px;
+}
+.link:hover {
+  color: var(--color-olive-green-light);
+}
+/* hero section */
+.hero-section .hero-title {
+  padding: 272px 0px;
+  margin-bottom: 0;
+}
+.hero-section {
+  background-image: url(../image/hero-section-backgraund.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-title {
+  color: var(--color-primary-white);
+  text-align: center;
+  font-size: 128px;
+  font-weight: 900;
+}
+.hero-title .accent {
+  color: var(--color-olive-green-light);
+  /* Advantages section */
+}
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.advantages-section {
+  padding: 16px 0;
+  background-color: var(--color-olive-green-light);
+}
+.advantages-list {
+  color: var(--color-primary-white);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Section section h2 */
+.traditions-title-h2 {
+  margin-bottom: 42px;
+}
+.traditions-text-first {
+  margin-bottom: 42px;
+}
+.formats-title {
+  margin-bottom: 80px;
+}
+.chefs-title {
+  margin: 0 auto 80px;
+  max-width: 535px;
+}
+.chef-image{
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0px 0px var(--color-primary-white), -16px 16px 0px 2px var(--color-secondary-black);
+}
+
+.chefs-title::after {
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-primary-light);
+  content: '';
+}
+.chefs-title::before{
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-primary-light);
+  content: '';
+}
+.contacts-title {
+  margin-bottom: 16px;
+}
+.section-title {
+  color: var(--color-primary-black);
+}
+.section-title.centered{
+  text-align: center;
+}
+.section-title {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.3;
+  /* висоту рядка на розмір шрифту поділити */
+}
+.section-title .accent {
+  color: var(--color-olive-green-dark);
+}
+/* Section section h3 */
+.section-title-h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.section-title-nastya-h3 {
+  margin-bottom: 16px;
+}
+.section-title-vlad-h3 {
+  margin-bottom: 16px;
+}
+.formats-title-h3 {
+  margin-bottom: 16px;
+}
+.section-title-h3 .section-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.section-title-h3 .section-text {
+  font-size: 14px;
+  font-weight: 300;
+}
+/* formar section */
+.format-card {
+  height: 444px;
+  border-radius: 16px;
+  border: 1px solid lightgray; /*remove*/
+  padding: 24px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primary-black) 100%
+  );
+}
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+}
+.formats-ul {
+  display: flex;
+  gap: 20px;
+}
+/* Traditions section */
+.traditions-section {
+  padding-top: 96px;
+}
+.traditions-flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.traditions-flex-title {
+  max-width: 710px;
+}
+.traditions-text .text-uppercase {
+  color: var(--color-olive-green-light);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.traditions-text .text {
+  color: var(--color-olive-green-light);
+  text-transform: lowercase;
+  font-weight: 600;
+}
+/* footer section */
+.contacts-list-item a {
+  color: var(--color-primary-white);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+.footer {
+  background-image: url(../image/footer-backgraund.png);
+  background-color: var(--color-primary-black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contacts-list-item:hover a {
+  color: var(--color-olive-green-light);
+}
+.footer .polite:hover {
+  color: var(--color-olive-green-light);
+}
+.footer .polite {
+  color: var(--color-primary-white);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+.footer .date {
+  color: #a18268;
+  font-size: 14px;
+  font-weight: 400;
+}
+/* header */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-grow: 1;
+}
+.header-ul {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.test {
+  background-color: gray;
+}
