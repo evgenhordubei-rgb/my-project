@@ -236,6 +236,25 @@ section {
     var(--color-primary-black) 100%
   );
 }
+.formats-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-black);
+  padding: 0px;
+  fill: var(--color-primary-black);
+  cursor: pointer;
+}
+.formats-button:hover{
+  background-color: var(--color-primary-black);
+  fill: var(--color-primary-white);
+
+}
+
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
 }
@@ -271,6 +290,9 @@ section {
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
+}
+.address-icon{
+  fill: var(--color-primary-white);
 }
 .footer {
   background-image: url(../image/footer-backgraund.png);
