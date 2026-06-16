@@ -43,7 +43,9 @@ ul {
   margin: 0;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
@@ -67,7 +69,9 @@ p {
 address {
   font-style: normal;
 }
-
+a {
+  display: inline-block;
+}
 section {
   padding: 48px 0px;
 }
@@ -224,6 +228,11 @@ section {
   font-weight: 300;
 }
 /* formar section */
+.formats-container{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
 .format-card {
   height: 444px;
   border-radius: 16px;
@@ -246,6 +255,7 @@ section {
   background-color: transparent;
   border: 1px solid var(--color-primary-black);
   padding: 0px;
+  flex-shrink: 0;
   fill: var(--color-primary-black);
   cursor: pointer;
 }
@@ -261,6 +271,24 @@ section {
 .formats-ul {
   display: flex;
   gap: 20px;
+}
+/* chefs section */
+.chefs-ul{
+   display: flex;
+   gap: 30px;
+}
+.chefs-item{
+  flex-basis: calc((100% - 30px) / 2);
+}
+.chef-text p { 
+  margin-bottom: 24px;
+}
+.chef-text p:last-child { 
+  margin-bottom: 0px;
+}
+.chef-card{
+  display: flex;
+  gap: 30px;
 }
 /* Traditions section */
 .traditions-section {
@@ -284,7 +312,43 @@ section {
   text-transform: lowercase;
   font-weight: 600;
 }
+/* contact section */
+.contact-container{
+  display: flex;
+  gap: 32px;
+}
+.contact-map{
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: none;
+}
+.contacts-section{
+ padding-bottom: 96px;
+}
 /* footer section */
+.footer-container{
+  display: flex;
+  gap: 20px;
+}
+.footer-logo{
+  flex-grow: 1;
+}
+.footer-ul{
+  flex-grow: 1;
+}
+.address-polite{
+  flex-grow: 1;
+}
+.footer-nav{
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
 .contacts-list-item a {
   color: var(--color-primary-white);
   font-size: 16px;
@@ -295,6 +359,7 @@ section {
   fill: var(--color-primary-white);
 }
 .footer {
+  padding: 32px 0px;
   background-image: url(../image/footer-backgraund.png);
   background-color: var(--color-primary-black);
   background-repeat: no-repeat;
