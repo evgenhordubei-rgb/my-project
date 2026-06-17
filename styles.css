@@ -167,8 +167,8 @@ section {
   margin-bottom: 80px;
 }
 .chefs-title {
+  position:relative;
   margin: 0 auto 80px;
-  max-width: 535px;
 }
 .chef-image{
   border-radius: 4px 4px 4px 200px;
@@ -176,12 +176,18 @@ section {
 }
 
 .chefs-title::after {
+  bottom: 24px;
+  position: absolute;
+  right: 0;
   display: block;
   width: 352px;
   border: 2px solid var(--color-primary-light);
   content: '';
 }
 .chefs-title::before{
+  bottom: 24px;
+  position: absolute;
+  left: 0;
   display: block;
   width: 352px;
   border: 2px solid var(--color-primary-light);
@@ -236,7 +242,6 @@ section {
 .format-card {
   height: 444px;
   border-radius: 16px;
-  border: 1px solid lightgray; /*remove*/
   padding: 24px;
   background-image: linear-gradient(
     180deg,
@@ -326,6 +331,28 @@ section {
  padding-bottom: 96px;
 }
 /* footer section */
+.footer{
+  position: relative;
+}
+.footer::before{
+  position: absolute;
+  background-image: url(./image/1\ bread.png);
+  content: '';
+  width: 180px;
+  height: 120px;
+  background-repeat: no-repeat;
+  left: 0;
+  bottom: 0;
+}
+.footer::after{
+  position: absolute;
+  width: 380px;
+  height: 190px;
+  bottom: 0;
+  right: 0;
+  background-image: url(./image/2\ breads.png);
+  content: '';
+}
 .footer-container{
   display: flex;
   gap: 20px;
@@ -404,4 +431,33 @@ section {
 
 .test {
   background-color: gray;
+}
+/* modal window  */
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#000000a1
+}
+.modal{
+  position: relative;
+  width: 880px;
+  height: 880px;
+  background-color: var(--color-primary-white);
+  border-radius: 32px;
+}
+.is-hidden{
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+}
+.modal-btn-close{
+  position: absolute;
+  right: 40px;
+  top: 40px;
 }
